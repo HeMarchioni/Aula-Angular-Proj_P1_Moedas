@@ -22,10 +22,7 @@ export class HenriqueWalletService {
 
   saldoBTC: number = 0;
 
-
-
   cotacaoAtual: CotacaoMoeda;
-
 
   cotaMoedas: Array<CotacaoMoeda> = [];
 
@@ -43,21 +40,10 @@ export class HenriqueWalletService {
     });
 
     this.cotaMoedas.push(cotacaoMoedas);
-
-
     this.comparar(cotacaoMoedas);
-
-
     this.cotacaoAtual = cotacaoMoedas;
 
-    console.log(this.cotaMoedas);
-
   }
-
-
-
-
-
 
 
 
@@ -117,9 +103,6 @@ export class HenriqueWalletService {
 
 
   }
-
-
-
 
 
   start() {
