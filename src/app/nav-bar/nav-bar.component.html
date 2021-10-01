@@ -1,0 +1,36 @@
+<div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <span class="mr-2 badge badge-pill badge-warning moeda">₿</span>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Disciplinas</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" [routerLink]="['/cotacao']" >Historico de Cotação</a>
+                    <a class="dropdown-item" [routerLink]="['/carteira']">Carteira de Bitcoin</a>
+                </div>
+            </li>
+
+
+
+            <li class="nav-item row ml-2" *ngIf="walletService.cotacaoAtual != undefined">
+            <p class="mr-3 shadow p-1 bg-white rounded border border-primary" [ngClass]="{'text-success': walletService.setaBTC === '↑', 'text-danger' : walletService.setaBTC === '↓' }">BTC R$
+                <span class="badge badge-pill badge-primary"> {{walletService.cotacaoAtual.cotacaoReal.BTC.valor.toFixed(4) }}</span>
+            {{walletService.setaBTC}}</p>
+
+            <p class="mr-3 shadow p-1 bg-white rounded border border-primary" [ngClass]="{'text-success': walletService.setaUSD === '↑', 'text-danger' : walletService.setaUSD === '↓' }">Dólar US$:
+                <span class="badge badge-pill badge-primary"> {{walletService.cotacaoAtual.cotacaoReal.USD.valor.toFixed(4) }}</span>
+                {{walletService.setaUSD}}</p>
+
+            <p class="mr-3 shadow p-1 bg-white rounded border border-primary" [ngClass]="{'text-success': walletService.setaEUR === '↑', 'text-danger' : walletService.setaEUR === '↓' }">Euro €$:
+                <span class="badge badge-pill badge-primary"> {{walletService.cotacaoAtual.cotacaoReal.EUR.valor.toFixed(4) }}</span>
+                {{walletService.setaEUR}}</p>
+
+            </li>
+
+
+        </ul>
+    </nav>
+</div>

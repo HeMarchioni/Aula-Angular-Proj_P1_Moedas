@@ -1,0 +1,34 @@
+<div class="panel panel-primary my-3">
+    <div class="panel-heading">
+        <h2>Historico Cotação Moedas em R$</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Data/hora</th>
+                <th>Valor Dólar US$</th>
+                <th>Valor Euro €$</th>
+                <th>Valor Bitcoin ₿$</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let cota of this.walletService.cotaMoedas">
+                <td>{{cota.time.updated}}</td>
+                <td>
+                    R$:
+                    {{cota.cotacaoReal.USD.valor.toFixed(10)}}
+                </td>
+                <td>
+                    R$:
+                    {{cota.cotacaoReal.EUR.valor.toFixed(10)}}
+                </td>
+                <td>
+                    R$:
+                    {{cota.cotacaoReal.BTC.valor.toFixed(6)}}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

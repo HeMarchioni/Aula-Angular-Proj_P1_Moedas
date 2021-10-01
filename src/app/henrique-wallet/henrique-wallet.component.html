@@ -1,0 +1,36 @@
+<div class="mx-4" >
+<h2> Carteira de Bitcoin</h2>
+
+<h3>Saldo:</h3>
+
+
+    <div class="row d-flex justify-content-start my-3">
+        <h4 class="shadow p-3 mb-5 bg-white rounded mx-2"> Bitcoin ₿$: <span  class="badge badge-pill badge-warning"> {{walletService.saldoBTC}} </span> </h4>
+
+
+        <p class="mr-2 shadow p-3 mb-5 bg-white rounded border border-primary">Real RS:
+            <span class="badge badge-pill badge-success"> {{(walletService.btc * walletService.saldoBTC).toFixed(2) }}</span></p>
+
+        <p class="mr-2 shadow p-3 mb-5 bg-white rounded border border-primary">Dólar US$:
+            <span class="badge badge-pill badge-success"> {{(walletService.dolarBtc * walletService.saldoBTC).toFixed(2) }}</span>    </p>
+
+        <p class="mr-2 shadow p-3 mb-5 bg-white rounded border border-primary">Euro €$:
+            <span class="badge badge-pill badge-success"> {{(walletService.euroBtc * walletService.saldoBTC).toFixed(2) }}</span>    </p>
+
+
+    </div>
+
+
+    <div class="mx-3">
+
+        <div class="form-group tmInput">
+            <label for="entrada">Digite o Valor em R$</label>
+            <input type="number" class="form-control" id="entrada"  [(ngModel)]="valorInput" >
+        </div>
+
+        <button (click)="adicionar()" class="btn btn-success tmButton"> Adicionar</button>
+        <button (click)="retirar()" class="btn btn-danger mx-2 tmButton"> Retirar</button>
+
+    </div>
+
+</div>

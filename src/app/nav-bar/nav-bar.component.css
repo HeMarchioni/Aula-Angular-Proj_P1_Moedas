@@ -1,0 +1,16 @@
+.moeda{
+    font-size: 25px;
+    color: black;
+}
+
+.dropdown-menu{
+    background-color:goldenrod;
+}
+
+.dropdown-item{
+    font-weight: bold;
+}
+
+p{
+    font-weight: bold;
+}
