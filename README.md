@@ -1,6 +1,31 @@
-# P1Angular
+# Avaliação A1 Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+
+## criar um projeto de aplicação Angular utilizando StackBlitz ou outra plataforma de sua preferência (desde que o código-fonte seja publicado no GitHub) com os seguintes requisitos:
+
+(20 pontos) Deve haver um serviço chamado “[SeuNome]WalletService” com métodos que registrem, a cada minuto, os valores das moedas USD, EUR e BTC em BRL utilizando a API da CoinDesk demonstrada em aula. O serviço deve permitir também a manutenção de um saldo de BTC
+
+(5 pontos) O AppComponent deve apresentar seus dados de identificação: nome completo, RA (registro de aluno ou matrícula) e link para o perfil do GitHub
+
+(10 pontos) O AppComponent deve apresentar um menu de navegação com links para os componentes solicitados abaixo.
+
+(5 pontos) O app.module deve ter configuradas as rotas para os componentes solicitados abaixo.
+
+(20 pontos) Deve haver uma indicação no menu de navegação caso alguma cotação aumente ou diminua (você pode usar arrow symbols ↑ e ↓ com texto verde ou vermelho para ilustrar)
+
+(20 pontos) Deve haver um componente chamado “[SeuNome]CurrencyComponent” que mostre a tabela com o histórico de cotações lidas.
+
+(20 pontos) Deve haver um componente chamado “[SeuNome]WalletComponent” com comandos para somar ou subtrair um valor em BRL do saldo de BTC da carteira e que mostre o valor do saldo e o valor correspondente em BRL, EUR e USD
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+### This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
 ## Development server
 
